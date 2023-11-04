@@ -38,3 +38,7 @@ Route::get("/pahar/{cname?}", [abulController::class, 'nahar']);
 
 Route::get("/employee", [EmployeeController::class, 'index']);
 Route::get("/employee/add", [EmployeeController::class, 'create'])->name('employee.add');
+Route::post("/employee/add", [EmployeeController::class, 'store'])->name('employee.store');
+Route::get("/employee/edit/{employee}", [EmployeeController::class, 'edit'])->name('employee.edit');
+Route::put("/employee/edit/{id}", [EmployeeController::class, 'update'])->name('employee.update');
+Route::delete("/employee/delete/{id}", [EmployeeController::class, 'destroy'])->name('employee.destroy');
